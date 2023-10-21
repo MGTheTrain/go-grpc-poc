@@ -5,12 +5,14 @@ import (
 	"log"
 	"net"
 
-	"pb" // Import the generated package
+	pb "hello" // Import the generated package
 
 	"google.golang.org/grpc"
 )
 
-type server struct{}
+type server struct {
+	pb.UnimplementedHelloServer
+}
 
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloResponse, error) {
 	return &pb.HelloResponse{Greeting: "Hello, " + in.Name}, nil
@@ -23,7 +25,7 @@ func main() {
 	}
 
 	s := grpc.NewServer()
-	pb.RegisterGreeterServer(s, &server{})
+	pb.RegisterHelloServer(s, &server{})
 
 	log.Println("Server listening on :8080")
 	if err := s.Serve(lis); err != nil {

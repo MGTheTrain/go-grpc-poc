@@ -2,9 +2,12 @@ module main
 
 go 1.21.3
 
-replace pb => ../proto
+replace hello => ../proto
 
-require google.golang.org/grpc v1.59.0
+require (
+	google.golang.org/grpc v1.59.0
+	hello v0.0.0-00010101000000-000000000000
+)
 
 require (
 	github.com/golang/protobuf v1.5.3 // indirect

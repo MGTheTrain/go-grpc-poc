@@ -2,11 +2,11 @@ module main
 
 go 1.21.3
 
-replace pb => ../proto
+replace hello => ../proto
 
 require (
 	google.golang.org/grpc v1.59.0
-	pb v0.0.0-00010101000000-000000000000
+	hello v0.0.0-00010101000000-000000000000
 )
 
 require (

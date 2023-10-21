@@ -24,7 +24,7 @@ Go trough the provided links in the [References section](#references).
 
 **1. Compiling the proto file**
 
-A  [sample.proto file](./proto/sample.proto) is manually created in the form of:
+A  [hello.proto file](./proto/hello.proto) is manually created in the form of:
 
 ```sh
 syntax = "proto3";
@@ -33,7 +33,7 @@ package sample;
 
 option go_package = ".";
 
-service HelloService {
+service Hello {
   rpc SayHello (HelloRequest) returns (HelloResponse);
 }
 
@@ -49,9 +49,9 @@ message HelloResponse {
 Execute: 
 
 ```sh
-cd sample
-go mod init sample
-protoc.exe --go_out=. --go-grpc_out=. sample.proto
+cd proto
+go mod init hello
+protoc.exe --go_out=. --go-grpc_out=. hello.proto
 go mod tidy
 cd ..
 ```

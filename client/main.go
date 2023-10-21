@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	pb "yourpackage" // Import the generated package
+	pb "hello" // Import the generated package
 
 	"google.golang.org/grpc"
 )
@@ -23,7 +23,7 @@ func main() {
 	}
 	defer conn.Close()
 
-	c := pb.NewGreeterClient(conn)
+	c := pb.NewHelloClient(conn)
 
 	name := defaultName
 	if len(os.Args) > 1 {
