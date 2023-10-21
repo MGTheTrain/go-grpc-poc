@@ -29,7 +29,7 @@ Go trough the provided links in the [References section](#references):
 
 A  [sample.proto file](./proto/sample.proto) is manually created in the form of:
 
-```go
+```sh
 syntax = "proto3";
 
 package sample;
