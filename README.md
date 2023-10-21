@@ -86,7 +86,7 @@ go mod tidy
 
 **3. Compile and run code**
 
-Following steps can be executed *repeatedly*:
+Following steps can be executed *repeatedly*.
 
 Ramp up the gRPC server in 1 terminal process:
 
