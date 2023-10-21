@@ -103,9 +103,9 @@ cd client
 go run main.go SampleGrim
 ```
 
-Results should look similair to:
+The result should look similair to:
 
-![Results](./images/results.PNG)
+![Result](./images/result.PNG)
 
 
 
