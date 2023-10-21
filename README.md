@@ -56,7 +56,7 @@ go mod tidy
 cd ..
 ```
 
-This will regenerate the `sample_grpc.pb.go` and `sample.pb.go` files, which contain:
+This will regenerate the [sample_grpc.pb.go](./proto/sample_grpc.pb.go) and [sample.pb.go](./proto/sample.pb.go) files, which contain:
 - Code for populating, serializing, and retrieving HelloRequest and HelloReply message types.
 - Generated client and server code.
 
