@@ -87,7 +87,7 @@ go mod init main
 go mod tidy
 ```
 
-**2. Compile and run code**
+**3. Compile and run code**
 
 Following steps can be executed **repeatedly**:
 
