@@ -20,10 +20,7 @@ A repository demonstrating the use of the RPC protocol trough go gRPC
 
 **0. Setup**
 
-Go trough the provided links in the [References section](#references):
-- **Configure Visual Studio Code for Go development**
-- **gRPC Quick Start**
-- **Protocol Buffer Compiler Installation**
+Go trough the provided links in the [References section](#references).
 
 **1. Compiling the proto file**
 
