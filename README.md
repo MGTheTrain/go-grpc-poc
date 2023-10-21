@@ -53,13 +53,57 @@ Execute:
 
 ```sh
 cd sample
+go mod init sample
 protoc.exe --go_out=. --go-grpc_out=. sample.proto
+go mod tidy
 cd ..
 ```
 
 This will regenerate the `sample.pb.go` and `sample.pb.go` files, which contain:
 - Code for populating, serializing, and retrieving HelloRequest and HelloReply message types.
 - Generated client and server code.
+
+**2. Setting up client and server code utilizing outputs of proto file compilation**
+
+For the client code following steps where executed:
+
+```sh
+mkdir -vp client
+cd client
+go mod init main
+# create and implement the main.go (consider go package in proto folder as local dependency)
+# update go.mod file
+go mod tidy
+```
+
+For the server code following steps where executed:
+
+```sh
+mkdir -vp server
+cd server
+go mod init main
+# create and implement the main.go (consider go package in proto folder as local dependency)
+# update go.mod file
+go mod tidy
+```
+
+**2. Compile and run code**
+
+Following steps can be executed **repeatedly**:
+
+Ramp up the gRPC server in 1 terminal process:
+
+```sh
+cd server
+go run main.go
+```
+
+Run the gRPC client in another terminal process:
+
+```sh
+cd client
+go run main.go SampleGrim
+```
 
 
 
