@@ -15,6 +15,7 @@ A repository demonstrating the use of the RPC protocol trough go gRPC
 - [Configure Visual Studio Code for Go development](https://learn.microsoft.com/en-us/azure/developer/go/configure-visual-studio-code)
 - [gRPC Quick Start](https://grpc.io/docs/languages/go/quickstart/)
 - [Protocol Buffer Compiler Installation](https://grpc.io/docs/protoc-installation/)
+- [helloworld sample](https://github.com/grpc/grpc-go/tree/master/examples/helloworld)
 
 ## How to use
 
