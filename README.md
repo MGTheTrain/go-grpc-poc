@@ -20,7 +20,7 @@ A repository demonstrating the use of the RPC protocol trough go gRPC
 
 ## History
 
-Following steps shall not be executed. This section tracks all the preconditional steps taken in order to utilize go gRPC. In order to test the samples skip to the [How to use](#how-to-use) section. The steps from **1. Compiling the proto file** will be described for [samples/unary-prc/](./samples/unary-rpc/) and is applied similairly to any of the other existing [samples](./samples/).
+Following steps shall not be executed. This section tracks all the preconditional steps taken in order to utilize go gRPC. In order to test the samples skip to the [How to use](#how-to-use) section. The steps from **1. Compiling the proto file** will be described for [samples/unary-rpc/](./samples/unary-rpc/) and is applied similairly to any of the other existing [samples](./samples/).
 
 **0. Setup**
 
@@ -95,20 +95,24 @@ Following steps can be executed *repeatedly*.
 Ramp up the gRPC server in one of the samples implementations in 1 terminal process, e.g. :
 
 ```sh
-cd samples/unary-prc/server
+cd samples/unary-rpc/server
 go run main.go
 ```
 
 Run the gRPC client in one of the samples implementations in another terminal process, e.g.:
 
 ```sh
-cd samples/unary-prc/client
+cd samples/unary-rpc/client
 go run main.go SampleGrim
 ```
 
-The result should look for [samples/unary-prc/](./samples/unary-rpc/) similair to:
+The result should look for [samples/unary-rpc/](./samples/unary-rpc/) similair to:
 
-![Result](./images/result.PNG)
+![Result](./images/result-hello-world-service.PNG)
+
+The result should look for [samples/client-streaming/](./samples/client-streaming/) similair to:
+
+![Result](./images/result-upload-service.PNG)
 
 
 
