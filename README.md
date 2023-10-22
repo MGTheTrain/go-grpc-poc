@@ -56,7 +56,7 @@ Execute:
 cd proto
 go mod init hello
 protoc.exe --go_out=. --go-grpc_out=. hello.proto
-go mod tidy
+go mod tidy # should create a `go.sum` file
 cd ..
 ```
 
@@ -74,7 +74,7 @@ cd client
 go mod init main
 # create and implement the main.go (consider go package in proto folder as local dependency)
 # update go.mod file to refer to the local go package in proto folder `replace hello => ../proto`
-go mod tidy
+go mod tidy # should create a `go.sum` file
 ```
 
 For the server code following steps where executed:
@@ -85,7 +85,7 @@ cd server
 go mod init main
 # create and implement the main.go (consider go package in proto folder as local dependency)
 # update go.mod file to refer to the local go package in proto folder `replace hello => ../proto`
-go mod tidy
+go mod tidy # should create a `go.sum` file
 ```
 
 ## How to use
