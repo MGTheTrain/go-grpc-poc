@@ -20,6 +20,8 @@ A repository demonstrating the use of the RPC protocol trough go gRPC
 
 ## History
 
+Following steps shall not be executed. This section tracks all the preconditional steps taken in order to utilize go gRPC. In order to test the samples skip to the [How to use](#how-to-use) section.
+
 **0. Setup**
 
 Go trough the provided links in the [References section](#references).
