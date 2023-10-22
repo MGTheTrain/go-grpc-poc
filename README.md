@@ -106,7 +106,7 @@ cd samples/unary-prc/client
 go run main.go SampleGrim
 ```
 
-The result should look for the [samples/unary-prc/](./samples/unary-prc/) similair to:
+The result should look for [samples/unary-prc/](./samples/unary-rpc/) similair to:
 
 ![Result](./images/result.PNG)
 
