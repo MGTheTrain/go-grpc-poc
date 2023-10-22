@@ -73,7 +73,7 @@ mkdir -vp client
 cd client
 go mod init main
 # create and implement the main.go (consider go package in proto folder as local dependency)
-# update go.mod file
+# update go.mod file to refer to the local go package in proto folder `replace hello => ../proto`
 go mod tidy
 ```
 
@@ -84,7 +84,7 @@ mkdir -vp server
 cd server
 go mod init main
 # create and implement the main.go (consider go package in proto folder as local dependency)
-# update go.mod file
+# update go.mod file to refer to the local go package in proto folder `replace hello => ../proto`
 go mod tidy
 ```
 
