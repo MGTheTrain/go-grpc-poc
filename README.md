@@ -20,7 +20,7 @@ A repository demonstrating the use of the RPC protocol trough go gRPC
 
 ## History
 
-Following steps shall not be executed. This section tracks all the preconditional steps taken in order to utilize go gRPC. In order to test the samples skip to the [How to use](#how-to-use) section.
+Following steps shall not be executed. This section tracks all the preconditional steps taken in order to utilize go gRPC. In order to test the samples skip to the [How to use](#how-to-use) section. The steps from **1. Compiling the proto file** will be described for [samples/unary-prc/](./samples/unary-rpc/) and is applied to any of the other existing samples.
 
 **0. Setup**
 
