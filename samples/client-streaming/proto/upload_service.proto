@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = ".";
+
+service FileUploadService {
+  rpc UploadFile (stream FileChunk) returns (FileUploadResponse);
+}
+
+message FileChunk {
+  bytes data = 1;
+}
+
+message FileUploadResponse {
+  string message = 1;
+}
