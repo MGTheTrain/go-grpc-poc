@@ -4,6 +4,7 @@
 
 + [Summary](#summary)
 + [References](#references)
++ [History](#history)
 + [How to use](#how-to-use)
 
 ## Summary
@@ -17,7 +18,7 @@ A repository demonstrating the use of the RPC protocol trough go gRPC
 - [Protocol Buffer Compiler Installation](https://grpc.io/docs/protoc-installation/)
 - [helloworld sample](https://github.com/grpc/grpc-go/tree/master/examples/helloworld)
 
-## How to use
+## History
 
 **0. Setup**
 
@@ -25,7 +26,7 @@ Go trough the provided links in the [References section](#references).
 
 **1. Compiling the proto file**
 
-A  [hello.proto file](./proto/hello.proto) is manually created in the form of:
+A  [hello.proto file](./samples/unary-rpc/proto/hello.proto) is manually created in the form of:
 
 ```sh
 syntax = "proto3";
@@ -57,7 +58,7 @@ go mod tidy
 cd ..
 ```
 
-This will regenerate the [hello_grpc.pb.go](./proto/hello_grpc.pb.go) and [hello.pb.go](./proto/hello.pb.go) files, which contain:
+This will regenerate the [hello_grpc.pb.go](./samples/unary-rpc/proto/hello_grpc.pb.go) and [hello.pb.go](./samples/unary-rpc/proto/hello.pb.go) files, which contain:
 - Code for populating, serializing, and retrieving HelloRequest and HelloReply message types.
 - Generated client and server code.
 
@@ -85,25 +86,25 @@ go mod init main
 go mod tidy
 ```
 
-**3. Compile and run code**
+## How to use
 
 Following steps can be executed *repeatedly*.
 
-Ramp up the gRPC server in 1 terminal process:
+Ramp up the gRPC server in one of the samples implementations in 1 terminal process, e.g. :
 
 ```sh
-cd server
+cd samples/unary-prc/server
 go run main.go
 ```
 
-Run the gRPC client in another terminal process:
+Run the gRPC client in one of the samples implementations in another terminal process, e.g.:
 
 ```sh
-cd client
+cd samples/unary-prc/client
 go run main.go SampleGrim
 ```
 
-The result should look similair to:
+The result should look for the [samples/unary-prc/](./samples/unary-prc/) similair to:
 
 ![Result](./images/result.PNG)
 
