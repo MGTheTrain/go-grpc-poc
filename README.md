@@ -92,14 +92,14 @@ go mod tidy # should create a `go.sum` file
 
 Following steps can be executed *repeatedly*.
 
-Ramp up the gRPC server in one of the samples implementations in 1 terminal process, e.g. :
+Ramp up the gRPC server for the [unary-rpc sample](./samples/unary-rpc/) in one of the samples implementations in 1 terminal process, e.g. :
 
 ```sh
 cd samples/unary-rpc/server
 go run main.go
 ```
 
-Run the gRPC client in one of the samples implementations in another terminal process, e.g.:
+Run the gRPC client for the [unary-rpc sample](./samples/unary-rpc/) in one of the samples implementations in another terminal process, e.g.:
 
 ```sh
 cd samples/unary-rpc/client
@@ -111,6 +111,23 @@ go run main.go --name SampleGrim
 The result should look for [samples/unary-rpc/](./samples/unary-rpc/) similair to:
 
 ![Result](./images/result-hello-world-service.PNG)
+
+
+Ramp up the gRPC server for the [client-streaming sample](./samples/client-streaming/) in one of the samples implementations in 1 terminal process, e.g. :
+
+```sh
+cd samples/client-streaming/server
+go run main.go
+```
+
+Run the gRPC client for the [client-streaming sample](./samples/client-streaming/) in one of the samples implementations in another terminal process, e.g.:
+
+```sh
+cd samples/client-streaming/client
+# Sample
+go run main.go -p <some upload file path on your filesystem> 
+go run main.go --path <some upload file path on your filesystem> 
+```
 
 The result should look for [samples/client-streaming/](./samples/client-streaming/) similair to:
 

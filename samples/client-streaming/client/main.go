@@ -2,9 +2,12 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"os"
 	pb "upload_service"
+
+	"github.com/spf13/cobra"
 
 	"google.golang.org/grpc"
 )
@@ -22,9 +25,14 @@ func main() {
 	defer conn.Close()
 	c := pb.NewFileUploadServiceClient(conn)
 
-	path := defaultPath
-	if len(os.Args) > 1 {
-		path = os.Args[1]
+	var path string
+
+	var rootCmd = &cobra.Command{Use: "myclitool", Short: "CLI tool for sending an gRPC request"}
+	rootCmd.Flags().StringVarP(&path, "path", "n", defaultPath, "Some path")
+	rootCmd.MarkFlagRequired("path")
+	if err := rootCmd.Execute(); err != nil {
+		fmt.Println(err)
+		os.Exit(1)
 	}
 	fileData, err := os.ReadFile(path)
 	if err != nil {

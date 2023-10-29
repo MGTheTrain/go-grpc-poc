@@ -15,8 +15,7 @@ import (
 )
 
 const (
-	address     = "localhost:8080"
-	defaultName = "World"
+	address = "localhost:8080"
 )
 
 func main() {
@@ -28,11 +27,11 @@ func main() {
 
 	c := pb.NewHelloClient(conn)
 
-	name := defaultName
+	var name string
 
 	var rootCmd = &cobra.Command{Use: "myclitool", Short: "CLI tool for sending an gRPC request"}
-	rootCmd.PersistentFlags().StringVarP(&name, "name", "n", defaultName, "Some name")
-	rootCmd.MarkPersistentFlagRequired("name")
+	rootCmd.Flags().StringVarP(&name, "name", "n", "Hello-Default-Value", "Some name")
+	rootCmd.MarkFlagRequired("name")
 	if err := rootCmd.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
