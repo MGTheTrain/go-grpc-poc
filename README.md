@@ -110,7 +110,7 @@ go run main.go -n SampleGrim
 go run main.go --name SampleGrim 
 ```
 
-The result should look for [samples/unary-rpc/](./samples/unary-rpc/) similair to:
+The result should look for [unary-rpc sample](./samples/unary-rpc/) similair to:
 
 ![Result](./images/result-hello-world-service.PNG)
 
@@ -132,7 +132,7 @@ go run main.go -p <some upload file path on your filesystem>
 go run main.go --path <some upload file path on your filesystem> 
 ```
 
-The result should look for [samples/client-streaming/](./samples/client-streaming/) similair to:
+The result should look for [client-streaming sample](./samples/client-streaming/) similair to:
 
 ![Result](./images/result-upload-service.PNG)
 
