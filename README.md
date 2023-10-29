@@ -22,11 +22,11 @@ A repository demonstrating the use of the RPC protocol trough go gRPC
 
 Following steps shall not be executed. This section tracks all the preconditional steps taken in order to utilize go gRPC. In order to test the samples skip to the [How to use](#how-to-use) section. The steps from **1. Compiling the proto file** will be described for [samples/unary-rpc/](./samples/unary-rpc/) and is applied similairly to any of the other existing [samples](./samples/).
 
-**0. Setup**
+### Setup
 
 Go trough the provided links in the [References section](#references).
 
-**1. Compiling the proto file**
+### Compiling the proto file
 
 A  [hello.proto file](./samples/unary-rpc/proto/hello.proto) is manually created in the form of:
 
@@ -64,7 +64,7 @@ This will regenerate the [hello_grpc.pb.go](./samples/unary-rpc/proto/hello_grpc
 - Code for populating, serializing, and retrieving HelloRequest and HelloReply message types.
 - Generated client and server code.
 
-**2. Setting up client and server code utilizing outputs of proto file compilation**
+### Setting up client and server code utilizing outputs of proto file compilation
 
 For the client code following steps where executed:
 
@@ -92,6 +92,8 @@ go mod tidy # should create a `go.sum` file
 
 Following steps can be executed *repeatedly*.
 
+### unary-rpc sample
+
 Ramp up the gRPC server for the [unary-rpc sample](./samples/unary-rpc/) in one of the samples implementations in 1 terminal process, e.g. :
 
 ```sh
@@ -112,6 +114,7 @@ The result should look for [samples/unary-rpc/](./samples/unary-rpc/) similair t
 
 ![Result](./images/result-hello-world-service.PNG)
 
+### client-streaming sample
 
 Ramp up the gRPC server for the [client-streaming sample](./samples/client-streaming/) in one of the samples implementations in 1 terminal process, e.g. :
 
