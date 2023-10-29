@@ -103,7 +103,9 @@ Run the gRPC client in one of the samples implementations in another terminal pr
 
 ```sh
 cd samples/unary-rpc/client
-go run main.go SampleGrim
+# Sample
+go run main.go -n SampleGrim 
+go run main.go --name SampleGrim 
 ```
 
 The result should look for [samples/unary-rpc/](./samples/unary-rpc/) similair to:

@@ -2,11 +2,14 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"os"
 	"time"
 
 	pb "hello" // Import the generated package
+
+	"github.com/spf13/cobra"
 
 	"google.golang.org/grpc"
 )
@@ -26,8 +29,13 @@ func main() {
 	c := pb.NewHelloClient(conn)
 
 	name := defaultName
-	if len(os.Args) > 1 {
-		name = os.Args[1]
+
+	var rootCmd = &cobra.Command{Use: "myclitool", Short: "CLI tool for sending an gRPC request"}
+	rootCmd.PersistentFlags().StringVarP(&name, "name", "n", defaultName, "Some name")
+	rootCmd.MarkPersistentFlagRequired("name")
+	if err := rootCmd.Execute(); err != nil {
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
