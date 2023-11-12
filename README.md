@@ -94,14 +94,14 @@ Following steps can be executed *repeatedly*.
 
 ### unary-rpc sample
 
-Ramp up the gRPC server for the [unary-rpc sample](./samples/unary-rpc/) in one of the samples implementations in 1 terminal process, e.g. :
+Ramp up the gRPC server for the [unary-rpc sample](./samples/unary-rpc/) in 1 terminal process, e.g. :
 
 ```sh
 cd samples/unary-rpc/server
 go run main.go
 ```
 
-Run the gRPC client for the [unary-rpc sample](./samples/unary-rpc/) in one of the samples implementations in another terminal process, e.g.:
+Run the gRPC client for the [unary-rpc sample](./samples/unary-rpc/) in another terminal process, e.g.:
 
 ```sh
 cd samples/unary-rpc/client
@@ -116,14 +116,14 @@ The result should look for [unary-rpc sample](./samples/unary-rpc/) similair to:
 
 ### client-streaming sample
 
-Ramp up the gRPC server for the [client-streaming sample](./samples/client-streaming/) in one of the samples implementations in 1 terminal process, e.g. :
+Ramp up the gRPC server for the [client-streaming sample](./samples/client-streaming/) in 1 terminal process, e.g. :
 
 ```sh
 cd samples/client-streaming/server
 go run main.go
 ```
 
-Run the gRPC client for the [client-streaming sample](./samples/client-streaming/) in one of the samples implementations in another terminal process, e.g.:
+Run the gRPC client for the [client-streaming sample](./samples/client-streaming/) in another terminal process, e.g.:
 
 ```sh
 cd samples/client-streaming/client
