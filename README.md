@@ -60,13 +60,13 @@ go mod tidy # should create a `go.sum` file
 cd ..
 ```
 
-This will regenerate the [hello_grpc.pb.go](./samples/unary-rpc/proto/hello_grpc.pb.go) and [hello.pb.go](./samples/unary-rpc/proto/hello.pb.go) files, which contain:
+This will generate the [hello_grpc.pb.go](./samples/unary-rpc/proto/hello_grpc.pb.go) and [hello.pb.go](./samples/unary-rpc/proto/hello.pb.go) files, which contain:
 - Code for populating, serializing, and retrieving HelloRequest and HelloReply message types.
 - Generated client and server code.
 
 ### Setting up client and server code utilizing outputs of proto file compilation
 
-For the client code following steps where executed:
+For the client code following steps were executed:
 
 ```sh
 mkdir -vp client
@@ -77,7 +77,7 @@ go mod init main # should create a `go.mod` file
 go mod tidy # should create a `go.sum` file
 ```
 
-For the server code following steps where executed:
+For the server code following steps were executed:
 
 ```sh
 mkdir -vp server
