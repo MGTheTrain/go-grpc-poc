@@ -1,4 +1,4 @@
-# go-grpc-sample
+# go-grpc-poc
 
 ## Table of Contents
 
